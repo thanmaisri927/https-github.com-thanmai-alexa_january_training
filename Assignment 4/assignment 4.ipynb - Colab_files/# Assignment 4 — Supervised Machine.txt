@@ -1,0 +1,75 @@
+# Assignment 4 — Supervised Machine Learning (Housing Price Prediction)
+
+###  Author
+**Kopparthi Thanmai Sri**  
+Roll No: 24341A4254  
+College: GMR Institute of Technology (GMRIT)
+
+---
+
+###  Project Overview
+This project predicts **house prices** using supervised machine learning algorithms.  
+The dataset used is `housing.csv`, which contains features such as area, bedrooms, bathrooms, and amenities.
+
+---
+
+###  Step 1 — Data Preprocessing
+- Handled missing values using `SimpleImputer`.  
+- Encoded categorical features using `LabelEncoder` / `OneHotEncoder`.  
+- Scaled numerical features using `StandardScaler`.  
+- Split the dataset into **80% training** and **20% testing** sets.
+
+---
+
+###  Step 2 — Models Used
+1. **Linear Regression**  
+2. **Decision Tree Regressor**  
+3. **Random Forest Regressor**  
+4. **KNN Regressor**  
+5. **SVM Regressor**
+
+---
+
+###  Step 3 — Evaluation Metrics
+Each model was evaluated using:
+- **R² Score** — goodness of fit  
+- **Mean Squared Error (MSE)** — average squared difference between predicted and actual values  
+- **Root Mean Squared Error (RMSE)** — square root of MSE  
+- **Mean Absolute Error (MAE)** — average absolute difference between predicted and actual values  
+
+---
+
+###  Step 4 — Results Summary
+| Model                  | R² Score   | MSE (×10¹¹) | RMSE       | MAE        |
+|------------------------|-----------|-------------|-----------|------------|
+| Linear Regression      | 0.5311    | 5.678       | 753,495   | 589,692    |
+| Decision Tree          | 0.0984    | 10.918      | 1,044,895 | 764,645    |
+| Random Forest          | 0.4882    | 6.198       | 787,272   | 600,188    |
+| KNN                    | 0.4309    | 6.891       | 830,113   | 659,137    |
+| SVM                    | -0.0635   | 12.878      | 1,134,822 | 913,341    |
+
+> **Note:** MSE values are scaled in ×10¹¹ for readability.
+
+---
+
+###  Conclusion
+From the evaluation:
+- **Linear Regression** had the highest R² score and relatively lower errors.  
+- **SVM** performed the worst, even showing a negative R².  
+- This project demonstrates the importance of **model selection** and how different regression algorithms perform differently on the same dataset.
+
+---
+
+###  Tools & Libraries
+- Python 3  
+- Pandas, NumPy  
+- Scikit-learn  
+- Matplotlib / Seaborn  
+- Google Colab
+
+---
+
+###  Files Included
+- `assignment4.ipynb` — Main Notebook  
+- `housing.csv` — Dataset  
+- `README.md` — Project Summary
